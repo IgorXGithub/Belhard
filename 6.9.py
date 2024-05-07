@@ -18,10 +18,7 @@ users_data = {
 
 def get_name_without_email(data: dict):
     for key, value in data.items():
-        if value.get("email") == None:
+        if value.get("email") == None or value.get("email") == "":
             print(value["name"])
-        for k, v in value.items():
-            if k == "email" and value["email"] == "":
-                print(value['name'])
 
 get_name_without_email(users_data)

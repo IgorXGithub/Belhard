@@ -15,9 +15,12 @@ cities = {
 }
 def get_key(my_dict: dict, value: str):
     for key, val in my_dict.items():
-        for i in val:
-            if i == value:
+        if isinstance(val, list):
+            if value in val:
                 return key
-    return None
+        elif val == value:
+            return key
+    else:
+        return None
 
 print(get_key(cities, 'Новосибирск'))

@@ -15,9 +15,9 @@ def code_Morse(text: str):
     code_M = ""
     for letter in text:
         if letter.upper() in keys:
-            code_M += morse_code[letter.upper()]
+            code_M = code_M + morse_code[letter.upper()] + " "
         if letter == " ":
-            code_M += " "
+            code_M += "   "
     return code_M
 
 
