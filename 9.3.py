@@ -18,7 +18,7 @@ def find_all_tasks(data: dict, data1: dict, builds_name: str):
 
     for i in tasks:
         for item in temp_data1:
-            if i == item.get('name') and item.get('dependencies') and item.get('dependencies'):
+            if i == item.get('name') and item.get('dependencies'):
                 tasks.extend(item.get('dependencies'))
 
 
